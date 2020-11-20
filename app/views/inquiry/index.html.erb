@@ -20,8 +20,16 @@
       <td><%= f.text_field :name, :required => true, placeholder: "鈴木太郎"%></td>
     </tr>
     <tr>
+      <th>会社名<span class="text-danger">（必須）</span></th>
+      <td><%= f.text_field :company, :required => true, placeholder: "（株）サロン"%></td>
+    </tr>
+    <tr>
       <th>メールアドレス<span class="text-danger">（必須）</span></th>
       <td><%= f.text_field :email, :required => true, placeholder: "suzuki@oway-jp.com"%></td>
+    </tr>
+    <tr>
+      <th>電話番号<span class="text-danger">（必須）</span></th>
+      <td><%= f.text_field :phone, :required => true, placeholder: "09012345678"%></td>
     </tr>
     <tr>
       <th>お問い合わせ内容</th>
