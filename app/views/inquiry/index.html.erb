@@ -1,40 +1,58 @@
-<%= form_for @inquiry, :url => inquiry_confirm_path do |f| %>
-  <div class="page-header">
-    <h1>お問い合わせ</h1>
-  </div>
+<div class="container">
 
-  <% if @inquiry.errors.any? %>
-    <div class="alert alert-danger" role="alert">
-      <strong>入力内容にエラーがあります</strong>
-      <ul>
-        <% @inquiry.errors.each do |attr, msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
 
-  <table class="table">
-    <tr>
-      <th>名前<span class="text-danger">（必須）</span></th>
-      <td><%= f.text_field :name, :required => true, placeholder: "鈴木太郎"%></td>
-    </tr>
-    <tr>
-      <th>会社名<span class="text-danger">（必須）</span></th>
-      <td><%= f.text_field :company, :required => true, placeholder: "（株）サロン"%></td>
-    </tr>
-    <tr>
-      <th>メールアドレス<span class="text-danger">（必須）</span></th>
-      <td><%= f.text_field :email, :required => true, placeholder: "suzuki@oway-jp.com"%></td>
-    </tr>
-    <tr>
-      <th>電話番号<span class="text-danger">（必須）</span></th>
-      <td><%= f.text_field :phone, :required => true, placeholder: "09012345678"%></td>
-    </tr>
-    <tr>
-      <th>お問い合わせ内容</th>
-      <td><%= f.text_area :message %></td>
-    </tr>
-  </table>
-  <%= f.submit '確認', class: 'btn btn-primary' %>
-<% end %>
+    <%= form_for @inquiry, :url => inquiry_confirm_path do |f| %>
+      <div class="page-header col-md-8 offset-md-2">
+        <h1>お問い合わせ</h1>
+      </div>
+
+      <% if @inquiry.errors.any? %>
+        <div class="alert alert-danger" role="alert">
+          <strong>入力内容にエラーがあります</strong>
+          <ul>
+            <% @inquiry.errors.each do |attr, msg| %>
+              <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div class="form col-md-8 offset-md-2">
+      <table class="table">
+        <tr>
+          <th>名前<span class="important">（必須）</span></th>
+          <td><%= f.text_field :name, :required => true, placeholder: "鈴木太郎"%></td>
+        </tr>
+        <tr>
+          <th>会社名<span class="important">（必須）</span></th>
+          <td><%= f.text_field :company, :required => true, placeholder: "（株）サロン"%></td>
+        </tr>
+        <tr>
+          <th>メールアドレス<span class="important">（必須）</span></th>
+          <td><%= f.text_field :email, :required => true, placeholder: "suzuki@oway-jp.com"%></td>
+        </tr>
+        <tr>
+          <th>電話番号<span class="important">（必須）</span></th>
+          <td><%= f.text_field :phone, :required => true, placeholder: "09012345678"%></td>
+        </tr>
+        <tr>
+          <th>お問い合わせ内容</th>
+          <td><%= f.text_area :message %></td>
+        </tr>
+      </table>
+
+      <div class="personal-information-warning">
+        <h6><span>【個人情報の取り扱いについて】</span></h6>
+        <p>送信いただいた情報は、不正アクセス、個人情報の紛失、破壊、改ざん及び漏洩等の予防等、適切な管理に努め、お問い合せ内容への返信以外の用途には利用いたしません。</p>
+      </div>
+
+      <%= f.submit '確認画面へ進む', class: 'btn btn-primary' %>
+
+      </div>
+
+
+    <% end %>
+
+
+
+</div>
