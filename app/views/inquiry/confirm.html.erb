@@ -1,9 +1,11 @@
-<div class="page-header">
+<div class="container">
+
+<div class="page-header col-md-8 offset-md-2">
   <h1>お問い合わせ</h1>
 </div>
 
 <%= form_for @inquiry, :url => inquiry_thanks_path do |f| %>
-  <table class="table">
+  <!-- <table class="table">
     <tr>
       <th>名前</th>
       <td>
@@ -39,6 +41,72 @@
         <%= simple_format(@inquiry.message) %>
       </td>
     </tr>
-  </table>
-  <%= f.submit '送信', :class => 'btn btn-primary' %>
+  </table> -->
+    <div class="confirm col-md-10 offset-md-1">
+        <div class="item row">
+          <div class="name col-md-3">
+            名前
+          </div>
+          <div class="input col-md-9">
+            <%= f.hidden_field :name %>
+            <%= @inquiry.name %>
+          </div>
+        </div>
+
+        <hr>
+
+        <div class="item row">
+          <div class="name col-md-3">
+            会社名
+          </div>
+          <div class="input col-md-9">
+            <%= f.hidden_field :company %>
+            <%= @inquiry.company %>
+          </div>
+        </div>
+
+        <hr>
+
+        <div class="item row">
+          <div class="name col-md-3">
+            メールアドレス
+          </div>
+          <div class="input col-md-9">
+            <%= f.hidden_field :email %>
+            <%= @inquiry.email %>
+          </div>
+        </div>
+
+        <hr>
+
+        <div class="item row">
+          <div class="name col-md-3">
+            電話番号
+          </div>
+          <div class="input col-md-9">
+            <%= f.hidden_field :phone %>
+            <%= @inquiry.phone %>
+          </div>
+        </div>
+
+        <hr>
+
+        <div class="item row">
+          <div class="name col-md-3">
+            お問い合わせ内容
+          </div>
+          <div class="input col-md-9">
+            <%= f.hidden_field :message %>
+            <%= simple_format(@inquiry.message) %>
+          </div>
+        </div>
+        <div class="col-md-6 offset-md-3">
+          <%= link_to "もう一度入力する", inquiry_path, :class => "btn btn-warning" %>
+          <br>
+          <%= f.submit 'この内容で送信する', :class => 'btn btn-primary' %>
+        </div>
+    </div>
+
 <% end %>
+
+</div>
