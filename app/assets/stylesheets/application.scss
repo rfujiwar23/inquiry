@@ -21,3 +21,9 @@
 /*color variables*/
 
 
+.navbar.bg-light {
+  background-color: #f3e2b3 !important;
+  .form-control {
+    border-radius: 4.25rem;
+  }
+}
