@@ -4,6 +4,8 @@
     <%= form_for @inquiry, :url => inquiry_confirm_path do |f| %>
       <div class="page-header col-md-8 offset-md-2">
         <h1>お問い合わせ</h1>
+        <p>本サイト掲載の商品は、ヘアサロン専売品となりお問い合わせはサロン様専用となっておりますのでご了承ください。
+尚、OWAY商品のお取引は、美容ディーラー「株式会社インテンス」との契約が必要となります。</p>
       </div>
 
       <% if @inquiry.errors.any? %>
@@ -33,7 +35,7 @@
         </tr>
         <tr>
           <th>電話番号<span class="important">（必須）</span></th>
-          <td><%= f.text_field :phone, :required => true, placeholder: "09012345678"%></td>
+          <td><%= f.text_field :phone, :required => true, placeholder: "09012345678"%><br><span>(ハイフンなし：数字のみ)</span></td>
         </tr>
         <tr>
           <th>お問い合わせ内容</th>

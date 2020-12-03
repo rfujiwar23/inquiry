@@ -13,10 +13,11 @@
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">
-    <img src="https://res.cloudinary.com/rfujiwar23/image/upload/v1594014527/muggs.png" width="30" height="30" class="d-inline-block align-top" alt="">
-    JJC Products
+      <!-- <h1> <img src="/assets/oway_black.png" alt="OWAY オーウェイ"></h1> -->
+      <%= image_tag '/assets/oway_black.png' %>
+    <!-- <img src="https://res.cloudinary.com/rfujiwar23/image/upload/v1594014527/muggs.png" width="30" height="30" class="d-inline-block align-top" alt=""> -->
   </a>
-    <form class="form-inline  ">
+    <form class="form-inline">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
 
     </form>
@@ -27,10 +28,11 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <div class="mr-auto"></div>
       <ul class="navbar-nav my-2 my-lg-0">
-<li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      <li class="nav-item active">
+        <!-- <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> -->
+        <%= link_to "Contact", inquiry_path %>
       </li>
-        <li class="nav-item dropdown">
+        <!-- <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-display="static" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Profile
         </a>
@@ -40,7 +42,7 @@
             <a class="dropdown-item" href="#">Another action</a>
           </div>
 
-        </li>
+        </li> -->
 
       </ul>
 
