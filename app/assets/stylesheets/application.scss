@@ -16,14 +16,34 @@
 
 @import "bootstrap/scss/bootstrap";
 
+$fa-font-path: '@fortawesome/fontawesome-free/webfonts';
+@import '@fortawesome/fontawesome-free/scss/fontawesome';
+@import '@fortawesome/fontawesome-free/scss/solid';
+@import '@fortawesome/fontawesome-free/scss/regular';
+@import '@fortawesome/fontawesome-free/scss/brands';
+@import '@fortawesome/fontawesome-free/scss/v4-shims';
+
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300&display=swap');
 
 /*color variables*/
 
 
 .navbar.bg-light {
-  background-color: #f3e2b3 !important;
+  background-color: rgba(105,105,105,0.5) !important;
   .form-control {
     border-radius: 4.25rem;
   }
+  .nav-item {
+    padding:0 10px;
+    .menu-link {
+      color: white;
+      text-decoration: none;
+    }
+    .menu-link:hover {
+        text-decoration: underline;
+    }
+  }
+
 }
+
+

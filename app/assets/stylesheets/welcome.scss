@@ -1,0 +1,333 @@
+// Place all the styles related to the Welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+.banner {
+  height: 75vh;
+  min-height: 500px;
+  background:url("../img/bg02.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.about_banner {
+  height: 55vh;
+  min-height: 300px;
+  background:url('/assets/background.jpg');
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+
+// social links
+.ct-socials {
+    position: fixed;
+    top: 25%;
+    right: 0;
+    list-style: none;
+    padding-left: 0;
+    z-index: 10;
+    margin: 0;
+    -webkit-transition: right 0.25s ease-in-out;
+    transition: right 0.25s ease-in-out;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    li {
+      padding: 0px 0;
+      a {
+        background: #3f4653;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        color: #fff;
+        width: 44px;
+        height: 54px;
+        -webkit-transition: all 0.15s ease-in-out;
+        transition: all 0.15s ease-in-out;
+        float: right;
+        padding-left: 5px;
+      }
+      a:hover {
+        width: 54px;
+        padding-left: 0;
+        text-decoration: none;
+        background: #3c9bd9;
+      }
+    }
+}
+
+
+// footer
+footer {
+  background:#333B3F;
+  color:#fff;
+}
+
+.footer_hr {
+  border-top:1px solid #fff;
+}
+footer ul li a, footer p a {
+  color: #fff;
+}
+
+footer ul li a:hover, footer p a:hover {
+  text-decoration: none;
+  color:#49AE4E;
+}
+
+
+
+// about page
+
+.container {
+  padding:40px 0;
+}
+
+.container .about {
+  /*background:orange;*/
+
+  padding:3vh 2vh;
+}
+
+.container .about h2 {
+  text-align: center;
+  color:rgb(61,66,70);
+  font-weight: bold;
+  font-size:1.5em;
+}
+
+.container .about p {
+  font-size:14px;
+  text-align: center;
+  padding-top: 20px;
+  line-height: 2em;
+}
+
+.container .about p strong {
+  color:rgb(61,66,70);
+  font-weight: bold;
+  font-size:1.25em;
+}
+
+.container .about h3 {
+  color:rgb(61,66,70);
+  font-weight: bold;
+  text-align: center;
+
+  font-size:1.25em;
+}
+
+.container .about h3 span {
+  border-bottom: 3px solid rgb(61,66,70);
+  padding-bottom:5px;
+}
+
+
+.container .insights {
+  /*width:100%;*/
+  margin:30px auto;
+  /*background:#333B3F;*/
+}
+
+.container .insights .text {
+
+}
+
+.container .insights h2 {
+  font-size: 1.25em;
+  color: rgb(61,66,70);
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+.container .insights p {
+  font-size:0.8em;
+}
+
+.container .glass {
+  background: url('../img/img-011.png');
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+
+.left {
+  visibility: hidden;
+}
+
+.right {
+  visibility: hidden;
+}
+
+.slideRight {
+    visibility: visible;
+    animation-name: slideRight;
+    -webkit-animation-name: slideRight;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-timing-function: ease-in-out;
+}
+
+.slideLeft {
+    visibility: visible;
+    animation-name: slideLeft;
+    -webkit-animation-name: slideLeft;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-timing-function: ease-in-out;
+}
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+
+}
+@-webkit-keyframes slideRight {
+    0% {
+        -webkit-transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+
+}
+@-webkit-keyframes slideLeft {
+    0% {
+        -webkit-transform: translateX(100%);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+.container .sdgs {
+  text-align: center;
+}
+
+.container .sdgs h2 {
+  font-size:1.5em;
+  font-weight: bold;
+  color: rgba(2,157,218, 1);
+}
+
+.container .sdgs h4 {
+  font-size:1.25em;
+}
+
+.container .sdgs p {
+  font-size:0.8em;
+}
+
+.container .sdgs h5 {
+  font-size:2em;
+  font-weight: bold;
+}
+
+.container .sdgs h6 {
+  font-size:4em;
+  font-weight: bold;
+}
+
+
+
+.hide {
+  visibility: hidden;
+}
+
+.pinch-out {
+    visibility: visible;
+    animation-name: pinch-out;
+    -webkit-animation-name: pinch-out;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-timing-function: ease-in-out;
+}
+
+@keyframes pinch-out {
+    0% {
+        transform: scale(0.7,0.7);
+        opacity:0;
+    }
+    100% {
+        transform: scale(1,1);
+        opacity:1;
+    }
+
+}
+
+@media (max-width: 575.98px) {
+    .br_on {
+        display: block;
+    }
+
+    .container h1.title {
+        color: #4d4d4d;
+        font-size: 1.25em;
+    }
+
+    .container .about h2 {
+        font-weight: bold;
+        font-size: 1.5em;
+    }
+
+    .container .about p {
+        font-size: 0.75em;
+    }
+
+    .container .about h3 {
+        font-size: 1.25em;
+    }
+
+    .container .about_oway .card h3 {
+        text-align: center;
+    }
+
+    .container .about_oway .card ul li {
+        font-size: 0.8em;
+    }
+
+    .container .about_oway .card {
+        margin: 20px 0 10px;
+    }
+
+    .container .about_oway .card h4 {
+        font-size: 0.9em;
+    }
+}
