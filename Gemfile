@@ -9,7 +9,7 @@ gem 'rails', '~> 6.0.3', '>= 6.0.3.4'
 # gem 'sqlite3', '~> 1.4'
 # 開発・テスト環境ではSQLite3を使う
 group :development, :test do
-  gem 'sqlite3'
+  gem 'pg'
 end
 
 # 本番環境ではPostgresqlを使う
